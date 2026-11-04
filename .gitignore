@@ -1,0 +1,11 @@
+# Ignorar arquivos grandes e binários no git para evitar problemas de limite
+/backend/
+/www/
+/luci_neural_lab.zip
+/neural-lab/datasets/processed/
+/neural-lab/datasets/training/carolina/*.jsonl
+/neural-lab/checkpoints/model/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
