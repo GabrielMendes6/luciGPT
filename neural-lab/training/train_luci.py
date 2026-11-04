@@ -143,8 +143,9 @@ def train():
     # Mixed Precision Scaler (para GPUs NVIDIA)
     scaler = torch.cuda.amp.GradScaler(enabled=(device.type == "cuda"))
 
-    # Diretório de Checkpoints
-    os.makedirs("checkpoints/model", exist_ok=True)
+    # Diretório de Checkpoints (salvando em /content/sample_data/luci_checkpoints se estiver no Colab, ou local)
+    checkpoint_dir = Path("/content/sample_data/luci_checkpoints") if Path("/content/sample_data").exists() else Path("checkpoints/model")
+    checkpoint_dir.mkdir(parents=True, exist_ok=True)
 
     print("\n🚀 INICIANDO LOOP DE TREINAMENTO...")
     model.train()
@@ -208,7 +209,7 @@ def train():
 
         # Salva Checkpoint
         if iter_num % save_interval == 0 or iter_num == max_iters:
-            ckpt_path = f"checkpoints/model/luci_gpt_iter_{iter_num}.pt"
+            ckpt_path = checkpoint_dir / f"luci_gpt_iter_{iter_num}.pt"
             torch.save({
                 'model_state_dict': model.state_dict(),
                 'optimizer_state_dict': optimizer.state_dict(),
