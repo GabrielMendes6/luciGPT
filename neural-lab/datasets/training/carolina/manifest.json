@@ -1,0 +1,203 @@
+{
+  "dataset": "LUCI Training Dataset",
+  "created_at": "2026-11-02T04:17:18.588244+00:00",
+  "configuration": {
+    "seed": 42,
+    "target_ratios": {
+      "train": 0.8,
+      "validation": 0.1,
+      "test": 0.1
+    },
+    "stratification": "document_typology",
+    "duplicate_grouping": "sha256_normalized_text",
+    "duplicate_groups_never_split": true
+  },
+  "statistics": {
+    "document_count": 26409,
+    "word_count": 11736272,
+    "unique_text_groups": 26409,
+    "duplicate_groups": 0,
+    "duplicate_excess_documents": 0
+  },
+  "splits": {
+    "train": {
+      "documents": 21127,
+      "words": 9365479,
+      "unique_domains": 1,
+      "corpus_licenses": {
+        "CC BY 4.0": 21127
+      },
+      "original_source_licenses": {
+        "A reprodução de matérias e fotografias é livre mediante a citação do Jornal da USP e do autor. No caso dos arquivos de áudio, deverão constar dos créditos a Rádio USP e, em sendo explicitados, os autores. Para uso de arquivos de vídeo, esses créditos deverão mencionar a TV USP e, caso estejam explicitados, os autores. Fotos devem ser creditadas como USP Imagens e o nome do fotógrafo.": 21127
+      }
+    },
+    "validation": {
+      "documents": 2641,
+      "words": 1195280,
+      "unique_domains": 1,
+      "corpus_licenses": {
+        "CC BY 4.0": 2641
+      },
+      "original_source_licenses": {
+        "A reprodução de matérias e fotografias é livre mediante a citação do Jornal da USP e do autor. No caso dos arquivos de áudio, deverão constar dos créditos a Rádio USP e, em sendo explicitados, os autores. Para uso de arquivos de vídeo, esses créditos deverão mencionar a TV USP e, caso estejam explicitados, os autores. Fotos devem ser creditadas como USP Imagens e o nome do fotógrafo.": 2641
+      }
+    },
+    "test": {
+      "documents": 2641,
+      "words": 1175513,
+      "unique_domains": 1,
+      "corpus_licenses": {
+        "CC BY 4.0": 2641
+      },
+      "original_source_licenses": {
+        "A reprodução de matérias e fotografias é livre mediante a citação do Jornal da USP e do autor. No caso dos arquivos de áudio, deverão constar dos créditos a Rádio USP e, em sendo explicitados, os autores. Para uso de arquivos de vídeo, esses créditos deverão mencionar a TV USP e, caso estejam explicitados, os autores. Fotos devem ser creditadas como USP Imagens e o nome do fotógrafo.": 2641
+      }
+    }
+  },
+  "typologies_by_split": {
+    "train": {
+      "ARTICLE_JOU_W": 753,
+      "SECTION_JOU_W": 16997,
+      "REGIONAL_EDITION_JOU_W": 436,
+      "COURSES_JOU_W": 1,
+      "READER_SPACE_JOU_W": 1,
+      "PODCAST_JOU_W": 756,
+      "USP_RADIO_JOU_W": 2064,
+      "USP_JOURNAL_JOU_W": 20,
+      "USP_TV_JOU_W": 55,
+      "FEATURE_JOU_W": 44
+    },
+    "validation": {
+      "ARTICLE_JOU_W": 94,
+      "SECTION_JOU_W": 2125,
+      "REGIONAL_EDITION_JOU_W": 55,
+      "PODCAST_JOU_W": 95,
+      "USP_RADIO_JOU_W": 258,
+      "USP_JOURNAL_JOU_W": 2,
+      "USP_TV_JOU_W": 7,
+      "FEATURE_JOU_W": 5
+    },
+    "test": {
+      "ARTICLE_JOU_W": 94,
+      "SECTION_JOU_W": 2125,
+      "REGIONAL_EDITION_JOU_W": 55,
+      "PODCAST_JOU_W": 95,
+      "USP_RADIO_JOU_W": 258,
+      "USP_JOURNAL_JOU_W": 2,
+      "USP_TV_JOU_W": 7,
+      "FEATURE_JOU_W": 5
+    }
+  },
+  "domains_by_split": {
+    "train": {
+      "jornal.usp.br": 21127
+    },
+    "validation": {
+      "jornal.usp.br": 2641
+    },
+    "test": {
+      "jornal.usp.br": 2641
+    }
+  },
+  "strata": {
+    "ARTICLE_JOU_W": {
+      "unique_text_groups": 941,
+      "documents": 941,
+      "group_allocation": {
+        "train": 753,
+        "validation": 94,
+        "test": 94
+      }
+    },
+    "COURSES_JOU_W": {
+      "unique_text_groups": 1,
+      "documents": 1,
+      "group_allocation": {
+        "train": 1,
+        "validation": 0,
+        "test": 0
+      }
+    },
+    "FEATURE_JOU_W": {
+      "unique_text_groups": 54,
+      "documents": 54,
+      "group_allocation": {
+        "train": 44,
+        "validation": 5,
+        "test": 5
+      }
+    },
+    "PODCAST_JOU_W": {
+      "unique_text_groups": 946,
+      "documents": 946,
+      "group_allocation": {
+        "train": 756,
+        "validation": 95,
+        "test": 95
+      }
+    },
+    "READER_SPACE_JOU_W": {
+      "unique_text_groups": 1,
+      "documents": 1,
+      "group_allocation": {
+        "train": 1,
+        "validation": 0,
+        "test": 0
+      }
+    },
+    "REGIONAL_EDITION_JOU_W": {
+      "unique_text_groups": 546,
+      "documents": 546,
+      "group_allocation": {
+        "train": 436,
+        "validation": 55,
+        "test": 55
+      }
+    },
+    "SECTION_JOU_W": {
+      "unique_text_groups": 21247,
+      "documents": 21247,
+      "group_allocation": {
+        "train": 16997,
+        "validation": 2125,
+        "test": 2125
+      }
+    },
+    "USP_JOURNAL_JOU_W": {
+      "unique_text_groups": 24,
+      "documents": 24,
+      "group_allocation": {
+        "train": 20,
+        "validation": 2,
+        "test": 2
+      }
+    },
+    "USP_RADIO_JOU_W": {
+      "unique_text_groups": 2580,
+      "documents": 2580,
+      "group_allocation": {
+        "train": 2064,
+        "validation": 258,
+        "test": 258
+      }
+    },
+    "USP_TV_JOU_W": {
+      "unique_text_groups": 69,
+      "documents": 69,
+      "group_allocation": {
+        "train": 55,
+        "validation": 7,
+        "test": 7
+      }
+    }
+  },
+  "source": {
+    "corpus": "Corpus Carolina",
+    "cleaned_manifest_sha256": "3144564c3792e2bfdab7e81e5aef246dc0aaf566e2fd394d7fc8cd30fab78781"
+  },
+  "output_files_sha256": {
+    "train": "d7db51e94f90330498234951e80e7d881aee572461aeecc56f3626bd796d2b0e",
+    "validation": "c0289bf62fa1f5dac25be181a846d862341ab083f21354ea4084b8f5ea4bf6fe",
+    "test": "9bfaf0e46c40e0df98c8ca3ff8a808ff8cd5a3d0b56273bc4557e0f0c459db97"
+  }
+}

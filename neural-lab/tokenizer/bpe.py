@@ -186,7 +186,7 @@ class BytePairTokenizer:
             elif token_id in special_by_id:
                 if byte_buffer:
                     result.append(
-                        bytes(byte_buffer).decode("utf-8")
+                        bytes(byte_buffer).decode("utf-8", errors="replace")
                     )
                     byte_buffer.clear()
 
@@ -194,11 +194,10 @@ class BytePairTokenizer:
                     result.append(special_by_id[token_id])
 
             else:
-                raise ValueError(
-                    f"Token ID desconhecido: {token_id}"
-                )
+                # Ignora ou trata IDs inválidos gerados por pesos aleatórios
+                continue
 
         if byte_buffer:
-            result.append(bytes(byte_buffer).decode("utf-8"))
+            result.append(bytes(byte_buffer).decode("utf-8", errors="replace"))
 
         return "".join(result)

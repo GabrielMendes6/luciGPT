@@ -1,0 +1,2 @@
+ ainda não! Precisamos ver o seguinte, o Model config recebe: vocab_size, embedding_dim, max_seq_len, num_heads, num_kv_heads, num_layers e ffn_dim. quero verificar qual a melhor configuração para meu
+  modelo, e também preciso entender mais sobre o vocabulario que por padrão defini: [Pasted text #1 +8 lines]
